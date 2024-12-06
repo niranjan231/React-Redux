@@ -1,12 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Navbar from "./Navbar";
+import { useSelector } from "react-redux";
 
-function App() {
+
+const App = () => {
+  const user = useSelector((state)=>state.counter.cart)
+  console.log("user", user)
+ 
+
   return (
-    <div className="App">
-      
+    <div>
+    <Navbar/>
     </div>
   );
-}
+};
 
 export default App;
